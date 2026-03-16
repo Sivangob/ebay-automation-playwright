@@ -43,59 +43,6 @@ class SearchPage(BasePage):
             logger.warning(f"Could not parse price text: '{price_text}'")
             return float("inf")
 
-    # def _collect_items_on_page(self, max_price: float, remaining: int) -> List[str]:
-    #     urls: List[str] = []
-    #
-    #     # שליפת רשימות הלוקייטורים מה-JSON
-    #     card_selectors = selectors("search_page", "item_cards_primary")
-    #
-    #     item_cards = []
-    #     for sel in card_selectors:
-    #         # הסרת ה-css= אם קיים במחרוזת הלוקייטור
-    #         clean_sel = sel.replace("css=", "") if sel.startswith("css=") else sel
-    #         found_cards = self.page.locator(clean_sel).all()
-    #         if found_cards:
-    #             item_cards = found_cards
-    #             logger.info(f"Found {len(item_cards)} cards using selector: {clean_sel}")
-    #             break
-    #
-    #     if not item_cards:
-    #         logger.warning("No item cards found with any primary selector.")
-    #         return []
-    #
-    #     for card in item_cards:
-    #         if len(urls) >= remaining:
-    #             break
-    #
-    #         try:
-    #             # חילוץ מחיר
-    #             price_selector = selectors("search_page", "item_price")[0].replace("css=", "")
-    #             price_text = card.locator(price_selector).first.inner_text(timeout=2000)
-    #             price = self._parse_price(price_text)
-    #
-    #             if price > max_price:
-    #                 continue
-    #
-    #             # חילוץ וניקוי לינק
-    #             link_selector = selectors("search_page", "item_link")[0].replace("css=", "")
-    #             raw_href = card.locator(link_selector).first.get_attribute("href", timeout=2000)
-    #
-    #             if raw_href:
-    #                 # 1. ניקוי פרמטרים מיותרים (הופך את הלינק לקצר ויציב)
-    #                 clean_url = raw_href.split("?")[0]
-    #
-    #                 # 2. וידוא שזה דף מוצר תקין ולא פרסומת
-    #                 if "/itm/" in clean_url:
-    #                     # מניעת כפילויות במידה ואותו מוצר מופיע פעמיים בדף
-    #                     if clean_url not in urls:
-    #                         urls.append(clean_url)
-    #                         logger.info(f"  + Collected item {len(urls)}/{remaining} at ${price}")
-    #
-    #         except Exception as exc:
-    #             # השארתי את ה-warning כדי שנדע אם משהו נשבר, אבל הטסט ימשיך לכרטיס הבא
-    #             logger.debug(f"Skipping item card: {exc}")
-    #
-    #     return urls
 
     def _collect_items_on_page(self, max_price: float, remaining: int) -> List[str]:
         urls: List[str] = []
@@ -224,11 +171,3 @@ class SearchPage(BasePage):
 
         logger.info(f"Search complete. Returning {len(collected)} item URL(s).")
         return collected
-
-    # // "name": "Modal close button",
-    # // "selectors": [
-    #                 // "button[aria-label='Close dialog']",
-    # // "button[aria-label='Close']",
-    # // "button.lightbox-dialog__close",
-    # // "xpath=//button[@data-testid='dialog-close-btn']"
-    #    //],

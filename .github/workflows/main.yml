@@ -93,6 +93,9 @@ jobs:
       # pytest.ini already sets addopts=-n auto; the flag below is explicit for
       # clarity (duplicate -n is harmless, last value wins in pytest-xdist).
       - name: Run tests – ${{ matrix.profile-group }}
+        env:
+          EBAY_USERNAME: ${{ secrets.EBAY_USERNAME }}
+          EBAY_PASSWORD: ${{ secrets.EBAY_PASSWORD }}
         run: pytest ${{ matrix.profiles }} -n auto
 
       # ── 6. Locate the timestamped Allure results directory ───────────────────
