@@ -1,0 +1,24 @@
+[?][main][DEBUG   ] asyncio: Using selector: EpollSelector
+[Chrome 127][gw2][INFO    ] pages.login_page: Starting eBay login for user: 'sivangob@gmail.com'
+[Chrome 127][gw2][INFO    ] pages.base_page: Navigating to: https://signin.ebay.com/signin/
+[Chrome 127][gw2][INFO    ] pages.base_page: [Username / email field] Trying primary selector: '#userid'
+[Chrome 127][gw2][INFO    ] pages.base_page: Locator succeeded: '#userid'
+[Chrome 127][gw2][INFO    ] pages.base_page: [Username / email field] Resolved with primary selector: '#userid'
+[Chrome 127][gw2][INFO    ] pages.base_page: [Username / email field] Filled with: 'sivangob@gmail.com'
+[Chrome 127][gw2][INFO    ] pages.login_page: Username entered.
+[Chrome 127][gw2][INFO    ] pages.login_page: Continue button clicked via '#signin-continue-btn'.
+[Chrome 127][gw2][WARNING ] pages.login_page: networkidle timed out after Continue click — proceeding.
+[Chrome 127][gw2][INFO    ] pages.login_page: Continue transition complete — waiting for password field.
+[Chrome 127][gw2][INFO    ] pages.base_page: [Password field] Trying primary selector: '#pass'
+[Chrome 127][gw2][INFO    ] pages.base_page: Locator succeeded: '#pass'
+[Chrome 127][gw2][INFO    ] pages.base_page: [Password field] Resolved with primary selector: '#pass'
+[Chrome 127][gw2][INFO    ] pages.base_page: [Password field] Filled with: '5Y$A29nh-Mx7L6&'
+[Chrome 127][gw2][INFO    ] pages.login_page: Password entered.
+[Chrome 127][gw2][INFO    ] pages.base_page: [Sign in button] Trying primary selector: '#sgnBt'
+[Chrome 127][gw2][INFO    ] pages.base_page: Locator succeeded: '#sgnBt'
+[Chrome 127][gw2][INFO    ] pages.base_page: [Sign in button] Resolved with primary selector: '#sgnBt'
+[Chrome 127][gw2][INFO    ] pages.base_page: [Sign in button] Clicked.
+[Chrome 127][gw2][ERROR   ] pages.base_page: Screenshot saved: screenshots/human_validation_detected_20260316_173910.png
+[Chrome 127][gw2][INFO    ] pages.login_page: Starting eBay login for user: 'sivangob@gmail.com'
+[Chrome 127][gw2][INFO    ] pages.base_page: Navigating to: https://signin.ebay.com/signin/
+[Chrome 127][gw2][ERROR   ] pages.base_page: Screenshot saved: screenshots/human_validation_detected_20260316_173911.png
