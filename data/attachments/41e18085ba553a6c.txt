@@ -1,6 +1,0 @@
-
-[conftest] Loaded auth state from: /home/runner/work/ebay-automation-playwright/ebay-automation-playwright/data/auth_state.json
-
-[conftest] Loaded auth state from: /home/runner/work/ebay-automation-playwright/ebay-automation-playwright/data/auth_state.json
-
-[conftest] Loaded auth state from: /home/runner/work/ebay-automation-playwright/ebay-automation-playwright/data/auth_state.json

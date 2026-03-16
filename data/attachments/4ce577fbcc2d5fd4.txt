@@ -1,0 +1,191 @@
+[?][main][DEBUG   ] asyncio: Using selector: EpollSelector
+[Edge Latest][gw0][INFO    ] pages.login_page: Starting eBay login for user: 'sivangob@gmail.com'
+[Edge Latest][gw0][INFO    ] pages.base_page: Navigating to: https://signin.ebay.com/signin/
+[Edge Latest][gw0][INFO    ] pages.base_page: [Username / email field] Trying primary selector: '#userid'
+[Edge Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#userid'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Username / email field] Resolved with primary selector: '#userid'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Username / email field] Filled with: 'sivangob@gmail.com'
+[Edge Latest][gw0][INFO    ] pages.login_page: Username entered.
+[Edge Latest][gw0][INFO    ] pages.login_page: Continue button clicked via '#signin-continue-btn'.
+[Edge Latest][gw0][WARNING ] pages.login_page: networkidle timed out after Continue click — proceeding.
+[Edge Latest][gw0][INFO    ] pages.login_page: Continue transition complete — waiting for password field.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Password field] Trying primary selector: '#pass'
+[Edge Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#pass'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Password field] Resolved with primary selector: '#pass'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Password field] Filled with: 'RGt7Xm$^G,+s@hy'
+[Edge Latest][gw0][INFO    ] pages.login_page: Password entered.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Sign in button] Trying primary selector: '#sgnBt'
+[Edge Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#sgnBt'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Sign in button] Resolved with primary selector: '#sgnBt'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Sign in button] Clicked.
+[Edge Latest][gw0][INFO    ] pages.login_page: Sign-in button clicked.
+[Edge Latest][gw0][INFO    ] pages.login_page: Login successful — current URL: https://accounts.ebay.com/acctsec/authn-register?srt=AQALAAABAM314pSRtofT3UnqSWzkRFgcubZrcc3ND8NutsDHR_CvF7iSewz2TfrPjjjr6GVrUA8704BcHNJWeeSOTYqbzef9nXCL_1LCMcYDgIcSoVuG_d12gTeTf_UnwkyHbkhiKTzsnuLLuhfoEFhdRAmEqbNoDoslkUANkIKl2dkpd3YeZLprEls3lwOjS89j_AU3CDmKCLdLWOC0I6WRS9uE1uSXNA4We_CYnsMknhVjcuiWo6xsa23v_G_I7ZfBVvxp5-fTSSIlVrJ57kZ_DDpYqhF2vAQNWK1iK4UcsWhLwdL6U6Mn6JZSdpYH2TnRvvah3QAO79S01agDCNCAfdFgI3A&ru=http%3A%2F%2Fwww.ebay.com
+[Edge Latest][gw0][INFO    ] pages.login_page: Login flow completed successfully.
+[Edge Latest][gw0][INFO    ] pages.product_page: Clearing cart before starting order...
+[Edge Latest][gw0][INFO    ] pages.base_page: Navigating to: https://cart.payments.ebay.com/sc/view
+[Edge Latest][gw0][INFO    ] pages.product_page: Removed a cart item using selector: 'button[aria-label*='Remove']'
+[Edge Latest][gw0][INFO    ] pages.product_page: Removed a cart item using selector: 'button[aria-label*='Remove']'
+[Edge Latest][gw0][INFO    ] pages.product_page: Removed a cart item using selector: 'button[aria-label*='Remove']'
+[Edge Latest][gw0][INFO    ] pages.product_page: Cart cleared.
+[Edge Latest][gw0][INFO    ] tests.test_ebay_flow: Searching for 'shoes' | max_price=$220.0 | limit=5
+[Edge Latest][gw0][INFO    ] pages.search_page: search_items_by_name_under_price | query='shoes' | max_price=220.0 | limit=5
+[Edge Latest][gw0][INFO    ] pages.search_page: Navigating directly to search URL: https://www.ebay.com/sch/i.html?_nkw=shoes&_udhi=220
+[Edge Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/sch/i.html?_nkw=shoes&_udhi=220
+[Edge Latest][gw0][INFO    ] pages.search_page: --- Scanning results page 1 ---
+[Edge Latest][gw0][INFO    ] pages.search_page: Found 62 cards using selector: xpath=//li[contains(@class, 's-card')]
+[Edge Latest][gw0][INFO    ] pages.search_page:   + Collected item 1/5 at $50.34
+[Edge Latest][gw0][INFO    ] pages.search_page:   + Collected item 2/5 at $151.25
+[Edge Latest][gw0][INFO    ] pages.search_page:   + Collected item 3/5 at $72.29
+[Edge Latest][gw0][INFO    ] pages.search_page:   + Collected item 4/5 at $107.70
+[Edge Latest][gw0][INFO    ] pages.search_page:   + Collected item 5/5 at $141.50
+[Edge Latest][gw0][INFO    ] pages.search_page: Progress: 5/5 items collected.
+[Edge Latest][gw0][INFO    ] pages.search_page: Search complete. Returning 5 item URL(s).
+[Edge Latest][gw0][INFO    ] tests.test_ebay_flow: Collected 5 URL(s).
+[Edge Latest][gw0][INFO    ] pages.product_page: [1/5] Processing: https://www.ebay.com/itm/298130101278...
+[Edge Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/itm/298130101278
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying primary selector: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Resolved with primary selector: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Clicked.
+[Edge Latest][gw0][INFO    ] pages.product_page:   'Add to cart' clicked for item 1.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with primary: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-1: 'button:has-text('No thanks') >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button:has-text('No thanks') >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-2: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Insurance popup – No thanks] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with primary: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-1: 'button[aria-label='Close cart'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close cart'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-2: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Side-cart close button] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with primary: 'button[aria-label='Close dialogue'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close dialogue'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with fallback-1: '.lightbox-dialog__close >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: '.lightbox-dialog__close >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Modal close button] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.product_page:   Item 1 successfully added to cart.
+[Edge Latest][gw0][INFO    ] pages.product_page: [2/5] Processing: https://www.ebay.com/itm/287188253917...
+[Edge Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/itm/287188253917
+[Edge Latest][gw0][INFO    ] pages.product_page: Found 3 visible listbox variant(s)
+[Edge Latest][gw0][INFO    ] pages.product_page: Clicked listbox trigger: 'button.listbox-button__control'
+[Edge Latest][gw0][INFO    ] pages.product_page: Randomly selected variant: 'black white'
+[Edge Latest][gw0][INFO    ] pages.product_page: Clicked listbox trigger: 'button.listbox-button__control'
+[Edge Latest][gw0][INFO    ] pages.product_page: Randomly selected variant: '42(US 8.5)'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying primary selector: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Resolved with primary selector: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Clicked.
+[Edge Latest][gw0][INFO    ] pages.product_page:   'Add to cart' clicked for item 2.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with primary: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-1: 'button:has-text('No thanks') >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button:has-text('No thanks') >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-2: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Insurance popup – No thanks] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with primary: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-1: 'button[aria-label='Close cart'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close cart'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-2: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Side-cart close button] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with primary: 'button[aria-label='Close dialogue'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close dialogue'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with fallback-1: '.lightbox-dialog__close >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: '.lightbox-dialog__close >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Modal close button] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.product_page:   Item 2 successfully added to cart.
+[Edge Latest][gw0][INFO    ] pages.product_page: [3/5] Processing: https://www.ebay.com/itm/287192809890...
+[Edge Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/itm/287192809890
+[Edge Latest][gw0][INFO    ] pages.product_page: Found 3 visible listbox variant(s)
+[Edge Latest][gw0][INFO    ] pages.product_page: Clicked listbox trigger: 'button.listbox-button__control'
+[Edge Latest][gw0][INFO    ] pages.product_page: Randomly selected variant: 'Red'
+[Edge Latest][gw0][INFO    ] pages.product_page: Clicked listbox trigger: 'button.listbox-button__control'
+[Edge Latest][gw0][INFO    ] pages.product_page: Randomly selected variant: '40'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying primary selector: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Resolved with primary selector: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Clicked.
+[Edge Latest][gw0][INFO    ] pages.product_page:   'Add to cart' clicked for item 3.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with primary: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-1: 'button:has-text('No thanks') >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button:has-text('No thanks') >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-2: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Insurance popup – No thanks] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with primary: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-1: 'button[aria-label='Close cart'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close cart'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-2: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Side-cart close button] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with primary: 'button[aria-label='Close dialogue'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close dialogue'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with fallback-1: '.lightbox-dialog__close >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: '.lightbox-dialog__close >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Modal close button] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.product_page:   Item 3 successfully added to cart.
+[Edge Latest][gw0][INFO    ] pages.product_page: [4/5] Processing: https://www.ebay.com/itm/377038260631...
+[Edge Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/itm/377038260631
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying primary selector: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Resolved with primary selector: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Clicked.
+[Edge Latest][gw0][INFO    ] pages.product_page:   'Add to cart' clicked for item 4.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with primary: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-1: 'button:has-text('No thanks') >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button:has-text('No thanks') >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-2: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Insurance popup – No thanks] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with primary: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-1: 'button[aria-label='Close cart'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close cart'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-2: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Side-cart close button] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with primary: 'button[aria-label='Close dialogue'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close dialogue'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with fallback-1: '.lightbox-dialog__close >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: '.lightbox-dialog__close >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Modal close button] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.product_page:   Item 4 successfully added to cart.
+[Edge Latest][gw0][INFO    ] pages.product_page: [5/5] Processing: https://www.ebay.com/itm/397721930373...
+[Edge Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/itm/397721930373
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying primary selector: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Resolved with primary selector: '#atcBtn_btn_1'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Clicked.
+[Edge Latest][gw0][INFO    ] pages.product_page:   'Add to cart' clicked for item 5.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with primary: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-1: 'button:has-text('No thanks') >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button:has-text('No thanks') >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-2: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Insurance popup – No thanks] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with primary: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-1: 'button[aria-label='Close cart'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close cart'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-2: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Side-cart close button] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with primary: 'button[aria-label='Close dialogue'] >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close dialogue'] >> visible=True'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with fallback-1: '.lightbox-dialog__close >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: Locator not visible: '.lightbox-dialog__close >> visible=True'
+[Edge Latest][gw0][WARNING ] pages.base_page: [Modal close button] Not visible with any selector.
+[Edge Latest][gw0][INFO    ] pages.product_page:   Item 5 successfully added to cart.
+[Edge Latest][gw0][INFO    ] pages.base_page: Navigating to: https://cart.payments.ebay.com/sc/view
+[Edge Latest][gw0][INFO    ] pages.product_page: Cart total via '[data-test-id='SUBTOTAL'] .text-display-span': $710.32
+[Edge Latest][gw0][INFO    ] pages.product_page: assertCartTotalNotExceeds passed: $710.32 ≤ $1100.00

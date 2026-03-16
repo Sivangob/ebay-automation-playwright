@@ -1,0 +1,193 @@
+[?][main][DEBUG   ] asyncio: Using selector: EpollSelector
+[Firefox Latest][gw0][INFO    ] pages.login_page: Starting eBay login for user: 'sivangob@gmail.com'
+[Firefox Latest][gw0][INFO    ] pages.base_page: Navigating to: https://signin.ebay.com/signin/
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Username / email field] Trying primary selector: '#userid'
+[Firefox Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#userid'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Username / email field] Resolved with primary selector: '#userid'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Username / email field] Filled with: 'sivangob@gmail.com'
+[Firefox Latest][gw0][INFO    ] pages.login_page: Username entered.
+[Firefox Latest][gw0][INFO    ] pages.login_page: Continue button clicked via '#signin-continue-btn'.
+[Firefox Latest][gw0][INFO    ] pages.login_page: Continue transition complete — waiting for password field.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Password field] Trying primary selector: '#pass'
+[Firefox Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#pass'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Password field] Resolved with primary selector: '#pass'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Password field] Filled with: 'RGt7Xm$^G,+s@hy'
+[Firefox Latest][gw0][INFO    ] pages.login_page: Password entered.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Sign in button] Trying primary selector: '#sgnBt'
+[Firefox Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#sgnBt'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Sign in button] Resolved with primary selector: '#sgnBt'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Sign in button] Clicked.
+[Firefox Latest][gw0][INFO    ] pages.login_page: Sign-in button clicked.
+[Firefox Latest][gw0][INFO    ] pages.login_page: Login successful — current URL: https://accounts.ebay.com/acctsec/authn-register?srt=AQALAAABAM314pSRtofT3UnqSWzkRFgcubZrcc3ND8NutsDHR_CvtdtDUaDtspcgWKgvOIOmEPQfVXVeUyaYohrpUm3vyDTd_n9H0UtarAPgtDI27qvB5DbJ-vPjqBju-_x5oLjv7p41LbPWje58FQxlihA9vGDi9jWIXQG6o2e1Hsjg7txZfaan5HWG6r0K_oEr58zsd52UT6q6iBFXr7SzEpbYJXpaslweUdTv8unBOORrhPlxFfmPZZrcvB3gkoFg5M613FUWTWHYNlulwHgZe6hgOKdsnJPIpuPH0fSbhVxGFh2D73E1zpa8MQPSdI2mh-DiO6rlCgs2K7FFHJNM0eYhfg4&ru=http%3A%2F%2Fwww.ebay.com
+[Firefox Latest][gw0][INFO    ] pages.login_page: Login flow completed successfully.
+[Firefox Latest][gw0][INFO    ] pages.product_page: Clearing cart before starting order...
+[Firefox Latest][gw0][INFO    ] pages.base_page: Navigating to: https://cart.payments.ebay.com/sc/view
+[Firefox Latest][gw0][INFO    ] pages.product_page: Removed a cart item using selector: 'button[aria-label*='Remove']'
+[Firefox Latest][gw0][INFO    ] pages.product_page: Removed a cart item using selector: 'button[aria-label*='Remove']'
+[Firefox Latest][gw0][INFO    ] pages.product_page: Removed a cart item using selector: 'button[aria-label*='Remove']'
+[Firefox Latest][gw0][INFO    ] pages.product_page: Removed a cart item using selector: 'button[aria-label*='Remove']'
+[Firefox Latest][gw0][INFO    ] pages.product_page: Removed a cart item using selector: 'button[aria-label*='Remove']'
+[Firefox Latest][gw0][INFO    ] pages.product_page: Cart cleared.
+[Firefox Latest][gw0][INFO    ] tests.test_ebay_flow: Searching for 'shoes' | max_price=$220.0 | limit=5
+[Firefox Latest][gw0][INFO    ] pages.search_page: search_items_by_name_under_price | query='shoes' | max_price=220.0 | limit=5
+[Firefox Latest][gw0][INFO    ] pages.search_page: Navigating directly to search URL: https://www.ebay.com/sch/i.html?_nkw=shoes&_udhi=220
+[Firefox Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/sch/i.html?_nkw=shoes&_udhi=220
+[Firefox Latest][gw0][INFO    ] pages.search_page: --- Scanning results page 1 ---
+[Firefox Latest][gw0][INFO    ] pages.search_page: Found 62 cards using selector: xpath=//li[contains(@class, 's-card')]
+[Firefox Latest][gw0][INFO    ] pages.search_page:   + Collected item 1/5 at $50.34
+[Firefox Latest][gw0][INFO    ] pages.search_page:   + Collected item 2/5 at $151.25
+[Firefox Latest][gw0][WARNING ] pages.search_page: Could not parse price text: ''
+[Firefox Latest][gw0][INFO    ] pages.search_page:   + Collected item 3/5 at $107.70
+[Firefox Latest][gw0][INFO    ] pages.search_page:   + Collected item 4/5 at $141.50
+[Firefox Latest][gw0][INFO    ] pages.search_page:   + Collected item 5/5 at $89.75
+[Firefox Latest][gw0][INFO    ] pages.search_page: Progress: 5/5 items collected.
+[Firefox Latest][gw0][INFO    ] pages.search_page: Search complete. Returning 5 item URL(s).
+[Firefox Latest][gw0][INFO    ] tests.test_ebay_flow: Collected 5 URL(s).
+[Firefox Latest][gw0][INFO    ] pages.product_page: [1/5] Processing: https://www.ebay.com/itm/298130101278...
+[Firefox Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/itm/298130101278
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying primary selector: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Resolved with primary selector: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Clicked.
+[Firefox Latest][gw0][INFO    ] pages.product_page:   'Add to cart' clicked for item 1.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with primary: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-1: 'button:has-text('No thanks') >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button:has-text('No thanks') >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-2: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Insurance popup – No thanks] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with primary: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-1: 'button[aria-label='Close cart'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close cart'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-2: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Side-cart close button] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with primary: 'button[aria-label='Close dialogue'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close dialogue'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with fallback-1: '.lightbox-dialog__close >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: '.lightbox-dialog__close >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Modal close button] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.product_page:   Item 1 successfully added to cart.
+[Firefox Latest][gw0][INFO    ] pages.product_page: [2/5] Processing: https://www.ebay.com/itm/287188253917...
+[Firefox Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/itm/287188253917
+[Firefox Latest][gw0][INFO    ] pages.product_page: Found 3 visible listbox variant(s)
+[Firefox Latest][gw0][INFO    ] pages.product_page: Clicked listbox trigger: 'button.listbox-button__control'
+[Firefox Latest][gw0][INFO    ] pages.product_page: Randomly selected variant: 'khaki'
+[Firefox Latest][gw0][INFO    ] pages.product_page: Clicked listbox trigger: 'button.listbox-button__control'
+[Firefox Latest][gw0][INFO    ] pages.product_page: Randomly selected variant: '42(US 8.5)'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying primary selector: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Resolved with primary selector: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Clicked.
+[Firefox Latest][gw0][INFO    ] pages.product_page:   'Add to cart' clicked for item 2.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with primary: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-1: 'button:has-text('No thanks') >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button:has-text('No thanks') >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-2: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Insurance popup – No thanks] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with primary: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-1: 'button[aria-label='Close cart'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close cart'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-2: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Side-cart close button] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with primary: 'button[aria-label='Close dialogue'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close dialogue'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with fallback-1: '.lightbox-dialog__close >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: '.lightbox-dialog__close >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Modal close button] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.product_page:   Item 2 successfully added to cart.
+[Firefox Latest][gw0][INFO    ] pages.product_page: [3/5] Processing: https://www.ebay.com/itm/377038260631...
+[Firefox Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/itm/377038260631
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying primary selector: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Resolved with primary selector: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Clicked.
+[Firefox Latest][gw0][INFO    ] pages.product_page:   'Add to cart' clicked for item 3.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with primary: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-1: 'button:has-text('No thanks') >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button:has-text('No thanks') >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-2: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Insurance popup – No thanks] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with primary: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-1: 'button[aria-label='Close cart'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close cart'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-2: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Side-cart close button] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with primary: 'button[aria-label='Close dialogue'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close dialogue'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with fallback-1: '.lightbox-dialog__close >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: '.lightbox-dialog__close >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Modal close button] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.product_page:   Item 3 successfully added to cart.
+[Firefox Latest][gw0][INFO    ] pages.product_page: [4/5] Processing: https://www.ebay.com/itm/397721930373...
+[Firefox Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/itm/397721930373
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying primary selector: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Resolved with primary selector: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Clicked.
+[Firefox Latest][gw0][INFO    ] pages.product_page:   'Add to cart' clicked for item 4.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with primary: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-1: 'button:has-text('No thanks') >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button:has-text('No thanks') >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-2: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Insurance popup – No thanks] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with primary: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-1: 'button[aria-label='Close cart'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close cart'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-2: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Side-cart close button] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with primary: 'button[aria-label='Close dialogue'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close dialogue'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with fallback-1: '.lightbox-dialog__close >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: '.lightbox-dialog__close >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Modal close button] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.product_page:   Item 4 successfully added to cart.
+[Firefox Latest][gw0][INFO    ] pages.product_page: [5/5] Processing: https://www.ebay.com/itm/257408384272...
+[Firefox Latest][gw0][INFO    ] pages.base_page: Navigating to: https://www.ebay.com/itm/257408384272
+[Firefox Latest][gw0][INFO    ] pages.product_page: Found 1 visible listbox variant(s)
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying primary selector: '#atcBtn_btn_1'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: '#atcBtn_btn_1'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying fallback-1 selector: '#atcBtn_btn'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: '#atcBtn_btn'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Trying fallback-2 selector: '[data-testid='ux-call-to-action']'
+[Firefox Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '[data-testid='ux-call-to-action']'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Resolved with fallback-2 selector: '[data-testid='ux-call-to-action']'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Add to cart button] Clicked.
+[Firefox Latest][gw0][INFO    ] pages.product_page:   'Add to cart' clicked for item 5.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with primary: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='no-thanks-btn'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-1: 'button:has-text('No thanks') >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button:has-text('No thanks') >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Insurance popup – No thanks] Checking visibility with fallback-2: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//button[contains(text(),'No thanks')] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Insurance popup – No thanks] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with primary: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[data-testid='flyout-cart-close'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-1: 'button[aria-label='Close cart'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close cart'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Side-cart close button] Checking visibility with fallback-2: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Side-cart close button] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with primary: 'button[aria-label='Close dialogue'] >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: 'button[aria-label='Close dialogue'] >> visible=True'
+[Firefox Latest][gw0][INFO    ] pages.base_page: [Modal close button] Checking visibility with fallback-1: '.lightbox-dialog__close >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: Locator not visible: '.lightbox-dialog__close >> visible=True'
+[Firefox Latest][gw0][WARNING ] pages.base_page: [Modal close button] Not visible with any selector.
+[Firefox Latest][gw0][INFO    ] pages.product_page:   Item 5 successfully added to cart.
+[Firefox Latest][gw0][INFO    ] pages.base_page: Navigating to: https://cart.payments.ebay.com/sc/view
+[Firefox Latest][gw0][INFO    ] pages.product_page: Cart total via '[data-test-id='SUBTOTAL'] .text-display-span': $710.32
+[Firefox Latest][gw0][INFO    ] pages.product_page: assertCartTotalNotExceeds passed: $710.32 ≤ $1100.00
