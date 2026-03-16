@@ -96,7 +96,7 @@ jobs:
         env:
           EBAY_USERNAME: ${{ secrets.EBAY_USERNAME }}
           EBAY_PASSWORD: ${{ secrets.EBAY_PASSWORD }}
-        run: pytest ${{ matrix.profiles }} -n auto --retries 2
+        run: pytest ${{ matrix.profiles }} -n auto --reruns 2
 
       # ── 6. Locate the timestamped Allure results directory ───────────────────
       # conftest.py creates allure-results/run_YYYYMMDD_HHMMSS/ at runtime.
