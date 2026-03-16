@@ -1,0 +1,174 @@
+name: eBay E2E Tests + Allure Report
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Write permission is required to push to the gh-pages branch.
+permissions:
+  contents: write
+
+env:
+  CI: "true"               # Activates headless mode in conftest.py
+  ALLURE_VERSION: "2.32.2"
+  PYTHON_VERSION: "3.12"
+
+# ── Matrix strategy ────────────────────────────────────────────────────────────
+#
+# Each matrix entry is a "profile group":
+#   profiles          – --browser-profile flags forwarded to pytest
+#   install-browsers  – space-separated list of browsers to `playwright install`
+#
+# Chrome version profiles (chrome_127, chrome_128, chrome_latest) all share the
+# same installed Chrome binary; the version is simulated via User-Agent override
+# defined in the _PROFILE_REGISTRY in conftest.py.
+# Edge and Firefox need their own Playwright install targets.
+
+jobs:
+  # ────────────────────────────────────────────────────────────────────────────
+  test:
+    name: "Test [${{ matrix.profile-group }}]"
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false      # let all groups finish even if one fails
+      matrix:
+        include:
+          - profile-group: chrome-profiles
+            profiles: >-
+              --browser-profile chrome_latest
+              --browser-profile chrome_128
+              --browser-profile chrome_127
+            install-browsers: chrome
+
+          - profile-group: edge-profile
+            profiles: --browser-profile edge_latest
+            install-browsers: msedge
+
+          - profile-group: firefox-profile
+            profiles: --browser-profile firefox_latest
+            install-browsers: firefox
+
+    steps:
+      # ── 1. Source code ──────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python ───────────────────────────────────────────────────────────
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      # ── 3. Playwright browsers ──────────────────────────────────────────────
+      # --with-deps installs all required OS libraries (libnss3, libatk, …).
+      # "chrome"  → Google Chrome for Testing  (used by chrome_* profiles)
+      # "msedge"  → Microsoft Edge             (used by edge_latest profile)
+      # "firefox" → Mozilla Firefox            (used by firefox_latest profile)
+      - name: Install Playwright browsers and system dependencies
+        run: playwright install --with-deps ${{ matrix.install-browsers }}
+
+      # ── 4. Auth state (optional secret) ─────────────────────────────────────
+      # Encode your session file locally:  base64 -w0 data/auth_state.json
+      # Then store the output as secret AUTH_STATE_JSON in GitHub Settings.
+      - name: Write eBay auth state from secret
+        run: |
+          if [ -n "$AUTH_STATE_JSON" ]; then
+            mkdir -p data
+            printf '%s' "$AUTH_STATE_JSON" | base64 -d > data/auth_state.json
+            echo "Auth state written to data/auth_state.json"
+          else
+            echo "WARNING: AUTH_STATE_JSON secret not set — running without saved session."
+          fi
+        env:
+          AUTH_STATE_JSON: ${{ secrets.AUTH_STATE_JSON }}
+
+      # ── 5. Run tests in parallel ─────────────────────────────────────────────
+      # CI=true (top-level env) → headless=True in conftest.py browser fixture.
+      # pytest.ini already sets addopts=-n auto; the flag below is explicit for
+      # clarity (duplicate -n is harmless, last value wins in pytest-xdist).
+      - name: Run tests – ${{ matrix.profile-group }}
+        run: pytest ${{ matrix.profiles }} -n auto
+
+      # ── 6. Locate the timestamped Allure results directory ───────────────────
+      # conftest.py creates allure-results/run_YYYYMMDD_HHMMSS/ at runtime.
+      # os.environ changes inside Python do not propagate back to the shell, so
+      # we rediscover the latest run_* subdirectory after pytest exits.
+      - name: Locate Allure results directory
+        if: always()
+        run: |
+          ALLURE_DIR=$(find allure-results -maxdepth 1 -type d -name "run_*" 2>/dev/null \
+            | sort -r | head -1)
+          if [ -z "$ALLURE_DIR" ]; then
+            echo "No timestamped run_* directory found; falling back to allure-results/"
+            ALLURE_DIR="allure-results"
+          fi
+          echo "Allure results dir: $ALLURE_DIR"
+          echo "ALLURE_RUN_DIR=$ALLURE_DIR" >> "$GITHUB_ENV"
+
+      # ── 7. Upload raw Allure results (per-group artifact) ────────────────────
+      # Each matrix job uploads its own artifact.  The report job below
+      # downloads and merges them all before generating the HTML report.
+      - name: Upload raw Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-${{ matrix.profile-group }}-run${{ github.run_number }}
+          path: ${{ env.ALLURE_RUN_DIR }}
+          retention-days: 14
+
+  # ────────────────────────────────────────────────────────────────────────────
+  report:
+    name: "Generate & Deploy Allure Report"
+    runs-on: ubuntu-latest
+    needs: test
+    if: always()   # run even when some test jobs failed
+
+    steps:
+      # ── 8. Download and merge all per-group Allure results ───────────────────
+      # merge-multiple:true flattens all matching artifacts into one directory.
+      # Allure result files are named with UUIDs so there are no collisions.
+      - name: Download all Allure results artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: allure-results-*-run${{ github.run_number }}
+          merge-multiple: true
+          path: allure-results-merged
+
+      # ── 9. Install Allure CLI ────────────────────────────────────────────────
+      - name: Install Allure CLI
+        run: |
+          wget -qO allure.tgz \
+            "https://github.com/allure-framework/allure2/releases/download/${{ env.ALLURE_VERSION }}/allure-${{ env.ALLURE_VERSION }}.tgz"
+          sudo tar -xzf allure.tgz -C /opt
+          sudo ln -sf "/opt/allure-${{ env.ALLURE_VERSION }}/bin/allure" /usr/local/bin/allure
+          allure --version
+
+      # ── 10. Generate combined HTML report ────────────────────────────────────
+      - name: Generate Allure HTML report
+        run: allure generate allure-results-merged --clean -o allure-report
+
+      # ── 11. Upload generated report as artifact ───────────────────────────────
+      - name: Upload Allure HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report-run${{ github.run_number }}
+          path: allure-report
+          retention-days: 30
+
+      # ── 12. Deploy to GitHub Pages ────────────────────────────────────────────
+      # Only on pushes to main — PRs never overwrite the live report.
+      # One-time setup: Repo → Settings → Pages → Source: gh-pages branch / root.
+      - name: Deploy Allure report to GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
+          publish_branch: gh-pages
+          commit_message: "ci: Allure report – run #${{ github.run_number }} [${{ github.sha }}]"

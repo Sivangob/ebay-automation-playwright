@@ -1,0 +1,25 @@
+{
+  "base_url": "https://www.ebay.com",
+  "login_url": "https://signin.ebay.com/signin/",
+  "cart_url": "https://cart.payments.ebay.com/sc/view",
+
+  "search": {
+    "query": "shoes",
+    "max_price": 220.0,
+    "item_limit": 5
+  },
+
+  "timeouts": {
+    "default_ms": 5000,
+    "price_filter_ms": 3000,
+    "popup_ms": 2000,
+    "navigation_ms": 10000,
+    "password_wait_ms": 8000,
+    "cart_total_ms": 4000
+  },
+
+  "browser": {
+    "headless": false,
+    "slow_mo": 0
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "search_page": {
+    "search_box": [
+      "input[name='_nkw']",
+      "#gh-ac",
+      "[aria-label='Search for anything']"
+    ],
+    "search_button": [
+      "#gh-search-btn",
+      "button.gh-search-button",
+      ".gh-search-button",
+      "button[value='Search']"
+    ],
+    "max_price_input": [
+      "input[aria-label*='Maximum value']",
+      "input[aria-label='Maximum Value in $']",
+      "span.x-textrange__input--to input.textbox__control",
+      "input[aria-label*='Maximum Value']"
+
+    ],
+    "price_filter_apply": [
+      "button[aria-label*='Submit price range']",
+      "button.x-refine__select__svg--right",
+      "[aria-label*='submit price range']",
+      "button[type='submit'].price-filter"
+    ],
+    "item_cards_primary": [
+      "xpath=//li[contains(@class, 's-card')]",
+      "xpath=//div[contains(@class, 's-item__wrapper') or @data-listingid]"
+      ],
+    "item_price": [
+      ".s-card__price",
+      "xpath=.//div[contains(@class, 's-card__attribute-row')]//span[contains(text(), '$') or contains(text(), 'ILS')]"
+      ],
+    "item_link": [
+      "a.s-card__link",
+      "xpath=.//a[contains(@href,'/itm/')]",
+      "xpath=.//div[contains(@class, 'su-card-container__header')]//a[@href]"
+    ],
+    "next_page": [
+      "a[aria-label='Go to next search page']",
+      "a.pagination__next",
+      "xpath=//a[@rel='next']"
+    ]
+  },
+
+  "product_page": {
+    "add_to_cart": [
+      "#atcBtn_btn_1",
+      "#atcBtn_btn",
+      "[data-testid='ux-call-to-action']",
+      "[data-testid='x-atc-action__btn']",
+      "xpath=//a[contains(@id,'atcBtn')] | //button[contains(@id,'atcBtn')]"
+    ],
+    "listbox_variants": [
+      "span.listbox-button",
+      "div.vim.x-sku span[class*='listbox']"
+    ],
+    "listbox_trigger": [
+      "button.listbox-button__control",
+      "button[aria-haspopup='listbox']"
+    ],
+    "listbox_first_option": [
+      "div.listbox__option[role='option']:not(:has-text('-')):not(:has-text('Select'))",
+      "[role='option'][data-sku-value-name]:not(:has-text('-')):not(:has-text('Select'))",
+      ".listbox__option[role='option']:not(:has-text('-')):not(:has-text('Select'))",
+      "li.listbox__option:not(:has-text('-')):not(:has-text('Select'))"
+    ],
+    "variant_labels": ["size", "color", "style", "type", "storage", "material"],
+    "variant_dropdown_xpath": "xpath=//select[contains(translate(@id,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'{label}')] | //select[contains(translate(@name,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'{label}')]",
+    "variant_btn_group_xpath": "xpath=//div[contains(translate(@id,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'{label}')] | //ul[contains(translate(@class,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'{label}')]",
+    "variant_option_xpath": "xpath=./option[not(@disabled) and @value and @value!='']",
+    "variant_btn_xpath": "xpath=.//button[not(@disabled) and not(contains(@class,'disabled'))] | .//li[not(@aria-disabled='true') and not(contains(@class,'disabled'))]",
+    "popups": [
+      {
+        "name": "Insurance popup – No thanks",
+        "selectors": [
+          "button[data-testid='no-thanks-btn'] >> visible=True",
+          "button:has-text('No thanks') >> visible=True",
+          "xpath=//button[contains(text(),'No thanks')] >> visible=True"
+        ]
+      },
+      {
+        "name": "Side-cart close button",
+        "selectors": [
+          "button[data-testid='flyout-cart-close'] >> visible=True",
+          "button[aria-label='Close cart'] >> visible=True",
+          "xpath=//div[@id='vi-atc-flyout']//button[@aria-label='Close'] >> visible=True"
+        ]
+      },
+      {
+        "name": "Modal close button",
+        "selectors": [
+          "button[aria-label='Close dialogue'] >> visible=True",
+          ".lightbox-dialog__close >> visible=True"
+        ]
+      }
+    ]
+  },
+
+  "login_page": {
+    "username_field": [
+      "#userid",
+      "input[name='userid']",
+      "xpath=//input[contains(translate(@placeholder,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'email')]"
+    ],
+    "continue_button": [
+      "#signin-continue-btn",
+      "button[type='submit']#signin-continue-btn",
+      "xpath=//button[normalize-space(.)='Continue']"
+    ],
+    "password_field": [
+      "#pass",
+      "input[name='pass']",
+      "xpath=//input[@type='password']"
+    ],
+    "sign_in_button": [
+      "#sgnBt",
+      "button[type='submit']#sgnBt",
+      "xpath=//button[normalize-space(.)='Sign in']"
+    ],
+    "password_field_wait": "#pass, input[name='pass']"
+  },
+
+  "cart_page": {
+    "cart_items_primary": [
+       "xpath=//div[contains(@class,'cart-bucket-item')] | //div[contains(@class,'item-details')]"
+    ],
+    "remove_item_button": [
+      "button[data-test-id='remove-btn']",
+      "button[aria-label*='Remove']",
+      "span.cart-bucket-item__remove button",
+      "xpath=//button[contains(translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'remove')]"
+    ],
+    "cart_count_badge": [
+      "#gh-cart-n",
+      ".gh-cart-count"
+    ],
+    "total_price_primary": [
+      "[data-test-id='SUBTOTAL'] .text-display-span",
+      "xpath=//div[@data-test-id='SUBTOTAL']//span[@class='text-display-span']",
+      "xpath=//span[@id='subtotal-value']"
+    ],
+    "total_price_fallback": [
+      "xpath=//div[contains(@class,'order-summary')]//span[contains(text(), '$')]",
+      "xpath=//span[contains(@class,'summary-value')]",
+      "xpath=//div[contains(@class,'total-row')]//span[@class='text-display-span']"
+    ]
+  }
+}
