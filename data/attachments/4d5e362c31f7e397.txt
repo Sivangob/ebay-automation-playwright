@@ -1,1 +1,0 @@
-[?][main][DEBUG   ] asyncio: Using selector: EpollSelector

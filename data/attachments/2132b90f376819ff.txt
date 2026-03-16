@@ -1,0 +1,14 @@
+[?][main][DEBUG   ] asyncio: Using selector: EpollSelector
+[Edge Latest][gw0][INFO    ] pages.login_page: Starting eBay login for user: 'sivangob@gmail.com'
+[Edge Latest][gw0][INFO    ] pages.base_page: Navigating to: https://signin.ebay.com/signin/
+[Edge Latest][gw0][INFO    ] pages.base_page: [Username / email field] Trying primary selector: '#userid'
+[Edge Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#userid'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Username / email field] Resolved with primary selector: '#userid'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Username / email field] Filled with: 'sivangob@gmail.com'
+[Edge Latest][gw0][INFO    ] pages.login_page: Username entered.
+[Edge Latest][gw0][INFO    ] pages.base_page: [Continue button] Trying primary selector: '#signin-continue-btn'
+[Edge Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#signin-continue-btn'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Continue button] Resolved with primary selector: '#signin-continue-btn'
+[Edge Latest][gw0][INFO    ] pages.base_page: [Continue button] Clicked.
+[Edge Latest][gw0][INFO    ] pages.login_page: Continue button clicked — waiting for password field.
+[Edge Latest][gw0][ERROR   ] pages.base_page: Screenshot saved: screenshots/continue_transition_timeout_20260316_162032.png
