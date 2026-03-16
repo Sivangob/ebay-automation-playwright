@@ -3,3 +3,4 @@ pytest
 pytest-xdist
 allure-pytest
 playwright-stealth
+pytest-rerunfailures

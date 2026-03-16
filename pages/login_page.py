@@ -25,8 +25,39 @@ class LoginPage(BasePage):
     # ------------------------------------------------------------------
 
     def _click_continue(self) -> None:
-        self.click("Continue button", *selectors("login_page", "continue_button"))
-        logger.info("Continue button clicked — waiting for password field.")
+        # Wait for the Continue button to be visible before interacting —
+        # Chrome/Edge can be slow to render it after the username step.
+        clicked = False
+        for sel in selectors("login_page", "continue_button"):
+            try:
+                loc = self.page.locator(sel)
+                loc.wait_for(state="visible", timeout=15000)
+                loc.first.click()
+                clicked = True
+                logger.info(f"Continue button clicked via '{sel}'.")
+                break
+            except PlaywrightTimeoutError:
+                logger.warning(f"Continue button not visible with '{sel}' — trying next.")
+                continue
+
+        if not clicked:
+            screenshot = self._take_screenshot("continue_button_not_found")
+            raise RuntimeError(
+                f"Continue button did not become visible within 15 s. "
+                f"Screenshot: {screenshot}"
+            )
+
+        # Wait for the network to settle after the click (equivalent to
+        # wait_until="networkidle" in navigation calls) so the password
+        # step loads fully before we attempt to locate the password field.
+        try:
+            self.page.wait_for_load_state("networkidle", timeout=15000)
+        except PlaywrightTimeoutError:
+            # eBay occasionally uses a partial XHR update instead of a full
+            # navigation; if networkidle never fires, proceed anyway.
+            logger.warning("networkidle timed out after Continue click — proceeding.")
+
+        logger.info("Continue transition complete — waiting for password field.")
         try:
             self.page.wait_for_selector(
                 selector("login_page", "password_field_wait"),
