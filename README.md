@@ -7,6 +7,12 @@ automated CI/CD pipeline that publishes a live HTML report to GitHub Pages on
 every push to `main`.
 
 ---
+## 📺 Demo
+Check out the full end-to-end flow in action (recorded in Headed mode):
+
+![eBay Automation Demo](path/to/your/video.mp4)
+
+> **Note:** The video demonstrates session-based login, search with filters, and cart validation.
 
 ## Table of Contents
 
@@ -271,7 +277,22 @@ After every run `conftest.py` automatically:
    `.github/workflows/main.yml` under the `chrome-profiles` matrix entry.
 
 ---
+## 🛡️ Anti-Bot & Security Strategy
 
+Running automation on live retail sites like eBay presents unique challenges due to aggressive anti-bot mechanisms (e.g., Distil Networks, Captcha, and MFA).
+
+### Challenges Encountered
+* **Account Locking:** Frequent login attempts from diverse IP addresses (especially GitHub Actions cloud IPs) can trigger automated account protection.
+* **MFA / Captcha:** eBay often challenges non-browser-like behavior with "Press and Hold" or SMS verification.
+
+### My Approach as a Senior Engineer
+To ensure stability and protect account integrity, I implemented the following:
+1. **Session Persistence:** Instead of active login on every run, the framework uses `auth_state.json`. If a valid session is detected, the UI login flow is skipped entirely.
+2. **Playwright Stealth:** Integration of stealth techniques to minimize the automation footprint (User-Agent spoofing, fingerprinting protection).
+3. **Human-like Interaction:** Added smart waits and specific navigation patterns to mimic real user behavior.
+4. **Graceful Degradation:** The framework is designed to detect when a Captcha or MFA is presented. Instead of hanging, it captures a screenshot, logs the event clearly in Allure, and terminates the run safely.
+
+---
 ## CI/CD Pipeline
 
 The GitHub Actions workflow (`.github/workflows/main.yml`) triggers on every

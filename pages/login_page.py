@@ -51,7 +51,7 @@ class LoginPage(BasePage):
         # wait_until="networkidle" in navigation calls) so the password
         # step loads fully before we attempt to locate the password field.
         try:
-            self.page.wait_for_load_state("networkidle", timeout=15000)
+            self.page.wait_for_load_state("networkidle", timeout=5000)
         except PlaywrightTimeoutError:
             # eBay occasionally uses a partial XHR update instead of a full
             # navigation; if networkidle never fires, proceed anyway.

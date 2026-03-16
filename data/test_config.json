@@ -14,7 +14,7 @@
     "price_filter_ms": 3000,
     "popup_ms": 2000,
     "navigation_ms": 10000,
-    "password_wait_ms": 15000,
+    "password_wait_ms": 5000,
     "cart_total_ms": 4000
   },
 
