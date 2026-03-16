@@ -8,7 +8,7 @@
           4. Add every collected item to the cart (screenshot per item).
           5. Assert the cart total does not exceed max_price × item count
              (navigates to cart, screenshots it, and asserts).
-        ","108118","test_search_add_to_cart_and_verify[chrome_128]","tests","Mon Mar 16 16:56:35 UTC 2026","passed","Mon Mar 16 16:58:24 UTC 2026","TestEbayFlow","test_ebay_flow","",""
+        ","992","test_search_add_to_cart_and_verify[chrome_latest]","tests","Mon Mar 16 17:27:12 UTC 2026","broken","Mon Mar 16 17:27:13 UTC 2026","TestEbayFlow","test_ebay_flow","",""
 "
         End-to-end flow:
           1. Log in to eBay using credentials from environment variables.
@@ -18,7 +18,7 @@
           4. Add every collected item to the cart (screenshot per item).
           5. Assert the cart total does not exceed max_price × item count
              (navigates to cart, screenshots it, and asserts).
-        ","110521","test_search_add_to_cart_and_verify[firefox_latest]","tests","Mon Mar 16 16:48:57 UTC 2026","passed","Mon Mar 16 16:50:47 UTC 2026","TestEbayFlow","test_ebay_flow","",""
+        ","991","test_search_add_to_cart_and_verify[chrome_128]","tests","Mon Mar 16 17:26:46 UTC 2026","broken","Mon Mar 16 17:26:46 UTC 2026","TestEbayFlow","test_ebay_flow","",""
 "
         End-to-end flow:
           1. Log in to eBay using credentials from environment variables.
@@ -28,7 +28,7 @@
           4. Add every collected item to the cart (screenshot per item).
           5. Assert the cart total does not exceed max_price × item count
              (navigates to cart, screenshots it, and asserts).
-        ","779","test_search_add_to_cart_and_verify[chrome_latest]","tests","Mon Mar 16 16:57:13 UTC 2026","broken","Mon Mar 16 16:57:14 UTC 2026","TestEbayFlow","test_ebay_flow","",""
+        ","73101","test_search_add_to_cart_and_verify[chrome_127]","tests","Mon Mar 16 17:26:35 UTC 2026","passed","Mon Mar 16 17:27:49 UTC 2026","TestEbayFlow","test_ebay_flow","",""
 "
         End-to-end flow:
           1. Log in to eBay using credentials from environment variables.
@@ -38,7 +38,7 @@
           4. Add every collected item to the cart (screenshot per item).
           5. Assert the cart total does not exceed max_price × item count
              (navigates to cart, screenshots it, and asserts).
-        ","814","test_search_add_to_cart_and_verify[edge_latest]","tests","Mon Mar 16 16:49:54 UTC 2026","broken","Mon Mar 16 16:49:54 UTC 2026","TestEbayFlow","test_ebay_flow","",""
+        ","849","test_search_add_to_cart_and_verify[edge_latest]","tests","Mon Mar 16 17:27:20 UTC 2026","broken","Mon Mar 16 17:27:21 UTC 2026","TestEbayFlow","test_ebay_flow","",""
 "
         End-to-end flow:
           1. Log in to eBay using credentials from environment variables.
@@ -48,4 +48,4 @@
           4. Add every collected item to the cart (screenshot per item).
           5. Assert the cart total does not exceed max_price × item count
              (navigates to cart, screenshots it, and asserts).
-        ","103574","test_search_add_to_cart_and_verify[chrome_127]","tests","Mon Mar 16 16:56:35 UTC 2026","passed","Mon Mar 16 16:58:19 UTC 2026","TestEbayFlow","test_ebay_flow","",""
+        ","89476","test_search_add_to_cart_and_verify[firefox_latest]","tests","Mon Mar 16 17:26:34 UTC 2026","passed","Mon Mar 16 17:28:03 UTC 2026","TestEbayFlow","test_ebay_flow","",""

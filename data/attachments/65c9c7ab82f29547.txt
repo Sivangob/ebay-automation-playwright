@@ -1,0 +1,18 @@
+[?][main][DEBUG   ] asyncio: Using selector: EpollSelector
+[Chrome Latest][gw0][INFO    ] pages.login_page: Starting eBay login for user: 'sivangob@gmail.com'
+[Chrome Latest][gw0][INFO    ] pages.base_page: Navigating to: https://signin.ebay.com/signin/
+[Chrome Latest][gw0][INFO    ] pages.base_page: [Username / email field] Trying primary selector: '#userid'
+[Chrome Latest][gw0][INFO    ] pages.base_page: Locator succeeded: '#userid'
+[Chrome Latest][gw0][INFO    ] pages.base_page: [Username / email field] Resolved with primary selector: '#userid'
+[Chrome Latest][gw0][INFO    ] pages.base_page: [Username / email field] Filled with: 'sivangob@gmail.com'
+[Chrome Latest][gw0][INFO    ] pages.login_page: Username entered.
+[Chrome Latest][gw0][INFO    ] pages.login_page: Continue button clicked via '#signin-continue-btn'.
+[Chrome Latest][gw0][WARNING ] pages.login_page: networkidle timed out after Continue click — proceeding.
+[Chrome Latest][gw0][INFO    ] pages.login_page: Continue transition complete — waiting for password field.
+[Chrome Latest][gw0][ERROR   ] pages.base_page: Screenshot saved: screenshots/continue_transition_timeout_20260316_172710.png
+[Chrome Latest][gw0][INFO    ] pages.login_page: Starting eBay login for user: 'sivangob@gmail.com'
+[Chrome Latest][gw0][INFO    ] pages.base_page: Navigating to: https://signin.ebay.com/signin/
+[Chrome Latest][gw0][ERROR   ] pages.base_page: Screenshot saved: screenshots/human_validation_detected_20260316_172712.png
+[Chrome Latest][gw0][INFO    ] pages.login_page: Starting eBay login for user: 'sivangob@gmail.com'
+[Chrome Latest][gw0][INFO    ] pages.base_page: Navigating to: https://signin.ebay.com/signin/
+[Chrome Latest][gw0][ERROR   ] pages.base_page: Screenshot saved: screenshots/human_validation_detected_20260316_172713.png
