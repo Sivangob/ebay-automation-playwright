@@ -1,0 +1,51 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+        End-to-end flow:
+          1. Log in to eBay using credentials from environment variables.
+          2. Empty the cart.
+          3. Search for the configured query under the configured max price
+             (up to 5 items, using the site's price filter and XPath).
+          4. Add every collected item to the cart (screenshot per item).
+          5. Assert the cart total does not exceed max_price × item count
+             (navigates to cart, screenshots it, and asserts).
+        ","0","test_search_add_to_cart_and_verify[chrome_128]","tests","Mon Mar 16 15:58:10 UTC 2026","broken","Mon Mar 16 15:58:10 UTC 2026","TestEbayFlow","test_ebay_flow","",""
+"
+        End-to-end flow:
+          1. Log in to eBay using credentials from environment variables.
+          2. Empty the cart.
+          3. Search for the configured query under the configured max price
+             (up to 5 items, using the site's price filter and XPath).
+          4. Add every collected item to the cart (screenshot per item).
+          5. Assert the cart total does not exceed max_price × item count
+             (navigates to cart, screenshots it, and asserts).
+        ","1","test_search_add_to_cart_and_verify[firefox_latest]","tests","Mon Mar 16 15:58:08 UTC 2026","broken","Mon Mar 16 15:58:08 UTC 2026","TestEbayFlow","test_ebay_flow","",""
+"
+        End-to-end flow:
+          1. Log in to eBay using credentials from environment variables.
+          2. Empty the cart.
+          3. Search for the configured query under the configured max price
+             (up to 5 items, using the site's price filter and XPath).
+          4. Add every collected item to the cart (screenshot per item).
+          5. Assert the cart total does not exceed max_price × item count
+             (navigates to cart, screenshots it, and asserts).
+        ","1","test_search_add_to_cart_and_verify[chrome_127]","tests","Mon Mar 16 15:58:10 UTC 2026","broken","Mon Mar 16 15:58:10 UTC 2026","TestEbayFlow","test_ebay_flow","",""
+"
+        End-to-end flow:
+          1. Log in to eBay using credentials from environment variables.
+          2. Empty the cart.
+          3. Search for the configured query under the configured max price
+             (up to 5 items, using the site's price filter and XPath).
+          4. Add every collected item to the cart (screenshot per item).
+          5. Assert the cart total does not exceed max_price × item count
+             (navigates to cart, screenshots it, and asserts).
+        ","0","test_search_add_to_cart_and_verify[edge_latest]","tests","Mon Mar 16 15:58:14 UTC 2026","broken","Mon Mar 16 15:58:14 UTC 2026","TestEbayFlow","test_ebay_flow","",""
+"
+        End-to-end flow:
+          1. Log in to eBay using credentials from environment variables.
+          2. Empty the cart.
+          3. Search for the configured query under the configured max price
+             (up to 5 items, using the site's price filter and XPath).
+          4. Add every collected item to the cart (screenshot per item).
+          5. Assert the cart total does not exceed max_price × item count
+             (navigates to cart, screenshots it, and asserts).
+        ","0","test_search_add_to_cart_and_verify[chrome_latest]","tests","Mon Mar 16 15:58:10 UTC 2026","broken","Mon Mar 16 15:58:10 UTC 2026","TestEbayFlow","test_ebay_flow","",""
