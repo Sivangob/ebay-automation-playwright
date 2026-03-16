@@ -1,2 +1,0 @@
-
-[conftest] WARNING: auth state not found at /home/runner/work/ebay-automation-playwright/ebay-automation-playwright/data/auth_state.json — running without session
