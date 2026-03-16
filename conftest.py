@@ -386,17 +386,18 @@ def _build_context(browser: Browser, profile_key: str) -> BrowserContext:
     """Isolated BrowserContext per test, configured from the profile registry."""
     profile = _resolve_profile(profile_key)
 
+    # נשתמש ב-User Agent של 127 כברירת מחדל כי הוא עבר את ה-Captcha ב-CI
+    fallback_ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+
     kwargs: dict = dict(
-        viewport={"width": 1366, "height": 768},
+        viewport={"width": 1920, "height": 1080},  # הגדלנו ל-Full HD
         locale="en-US",
         timezone_id="America/New_York",
         java_script_enabled=True,
         extra_http_headers={"Accept-Language": "en-US,en;q=0.9"},
+        user_agent=profile["user_agent"] if profile["user_agent"] else fallback_ua,
+        device_scale_factor=1,
     )
-
-    # Apply profile-specific User-Agent override when set.
-    if profile["user_agent"]:
-        kwargs["user_agent"] = profile["user_agent"]
 
     if AUTH_STATE_PATH.exists():
         kwargs["storage_state"] = str(AUTH_STATE_PATH)
@@ -407,7 +408,13 @@ def _build_context(browser: Browser, profile_key: str) -> BrowserContext:
             " — running without session"
         )
 
-    return browser.new_context(**kwargs)
+    context = browser.new_context(**kwargs)
+
+    # הזרקת ה-Stealth לכל קונטקסט שנוצר
+    from playwright_stealth import Stealth
+    Stealth().apply_stealth_sync(context)
+
+    return context
 
 
 @pytest.fixture(scope="function")
