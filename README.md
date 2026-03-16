@@ -8,10 +8,8 @@ every push to `main`.
 
 ---
 ## 📺 Demo
-Check out the full end-to-end flow in action (recorded in Headed mode):
-
-![eBay Automation Demo](path/to/your/video.mp4)
-
+The full execution video (118MB) can be viewed or downloaded here:
+[**Watch Execution Demo (Google Drive)**](https://drive.google.com/file/d/11-qiM1LUbjsKsGZ8xuCcXIolpO4nYK5t/view?usp=sharing)
 > **Note:** The video demonstrates session-based login, search with filters, and cart validation.
 
 ## Table of Contents
